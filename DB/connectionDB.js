@@ -1,18 +1,12 @@
 const mysql = require('mysql2');
 
-const connection = mysql.createConnection({
-    host: 'localhost', 
-    user: 'root',
-    password: '', 
-    database: 'midterm' 
-});
-
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting to the database:', err.stack);
-        return;
-    }
-    console.log('Connected to the database as ID ' + connection.threadId);
+const connection = mysql.createPool({
+    connectionLimit: 10,
+    host: process.env.MYSQL_HOST || "localhost",
+    user: process.env.MYSQL_USER || "root",
+    password: process.env.MYSQL_PASSWORD || "password",
+    database: process.env.MYSQL_DATABASE || "midterm",
+    port: process.env.MYSQL_PORT || 3306,  // Port mặc định bên trong Docker
 });
 
 module.exports = connection;

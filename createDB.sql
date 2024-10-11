@@ -1,5 +1,5 @@
 -- Tạo cơ sở dữ liệu
-CREATE DATABASE midterm;
+CREATE DATABASE IF NOT EXISTS midterm;
 
 -- Sử dụng cơ sở dữ liệu vừa tạo
 USE midterm;
