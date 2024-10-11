@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    margin: 0; /* Remove default margin from body */
+    padding: 0; /* Remove default padding from body */
+    background: #f4f4f4; /* Background color for the entire page */
+    font-family: 'Arial', sans-serif; /* Set a default font for the page */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+#page_title {
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Custom font family */
+    text-align: center; /* Center the text */
+    width: 100%; /* Full width */
+    font-size: 2.5em; /* Increase font size for emphasis */
+    color: #333; /* Darker color for better readability */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    margin: 20px 0; /* Vertical margin to create space around the title */
+    padding: 10px; /* Padding inside the title */
+    background-color: #f9f9f9; /* Light background color */
+    border: 2px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#page_title:hover {
+    color: #0056b3; /* Change color on hover for interactivity */
+    transition: color 0.3s ease; /* Smooth transition effect for color change */
+}
+
+#student_table {
+    width: 80%; /* Width of the table */
+    margin: auto; /* Center the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+#student_table th, #student_table td {
+    border: 1px solid black; /* Border for table cells */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+#student_table th {
+    background-color: #f4f4f4; /* Light gray background for the header */
+}
+
+.btn-view, .btn-edit, .btn-delete {
+    padding: 5px 10px; /* Padding for buttons */
+    margin-right: 5px; /* Margin between buttons */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.btn-view {
+    background-color: #007bff; /* Blue */
+    color: white; /* White text */
+}
+
+.btn-edit {
+    background-color: #28a745; /* Green */
+    color: white; /* White text */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red */
+    color: white; /* White text */
+}
+
+.btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0; /* Align left */
+    top: 0; /* Align top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe; /* White background for modal */
+    margin: 15% auto; /* Center the modal */
+    padding: 20px; /* Padding inside modal */
+    border: 1px solid #888; /* Border around modal */
+    width: 80%; /* Width of modal */
+    max-width: 600px; /* Limit max width for larger screens */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Close Button */
+.close {
+    color: #aaa; /* Light gray color */
+    float: right; /* Align right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Label Styles */
+label {
+    margin: 10px 0 5px; /* Margins for labels */
+    font-weight: bold; /* Bold labels */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"] {
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Margin below inputs */
+    border: 1px solid #ccc; /* Border around inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green */
+    color: white; /* White text */
+    padding: 10px; /* Padding inside button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Confirmation Modal Styles (Same as Edit Modal Styles) */
+#deleteStudentModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0; /* Align left */
+    top: 0; /* Align top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe; /* White background for modal */
+    margin: 15% auto; /* Center the modal */
+    padding: 20px; /* Padding inside modal */
+    border: 1px solid #888; /* Border around modal */
+    width: 80%; /* Width of modal */
+    max-width: 600px; /* Limit max width for larger screens */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+#addBtn_float{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
