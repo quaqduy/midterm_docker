@@ -45,9 +45,11 @@ function closeDeleteModal() {
 }
 
 function openAddStudentModal() {
-    document.getElementById('addStudentModal').style.display = 'block';
+    const modal = document.getElementById('addStudentModal');
+    modal.style.display = 'flex';
 }
 
 function closeAddModal() {
-    document.getElementById('addStudentModal').style.display = 'none';
+     const modal = document.getElementById('addStudentModal');
+    modal.style.display = 'none';
 }
